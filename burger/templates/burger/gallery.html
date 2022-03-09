@@ -1,0 +1,27 @@
+{% extends 'burger/index.html' %}
+{% load static %}
+
+{% block content %}
+<!--gallery section starts-->
+<section class="gallery">
+
+    <h1 class="heading"> our food <span> gallery </span></h1>
+
+    <div class="box-container">
+        {% for gallery in gallery_food %}
+        <div class="box">
+            <img src="{{gallery.imageURL}}" alt="">
+            <div class="content">
+                <h3>{{gallery.food_name}}</h3>
+                <p>{{gallery.description}}</p>
+                <button data-product={{gallery.id}} data-action="add" class="btn add-btn update-cart">order now</button>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+</section>
+<!--gallery section ends-->
+{% endblock content %}

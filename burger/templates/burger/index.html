@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gramatan Restaurant{% endblock title %}</title>
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    <!--header section starts-->
+
+    <header>
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>Gramatan Restaurant</a>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="{% url 'index' %}">home</a>
+            <a href="{% url 'speciality' %}">speciality</a>
+            <a href="{% url 'popular' %}">popular</a>
+            <a href="{% url 'gallery' %}">gallery</a>
+            <a href="{% url 'review' %}">review</a>
+            <a href="{% url 'order' %}">order</a>
+            <a href="{% url 'checkout' %}" class="fas fa-shopping-cart">{{cartItems}}</a>
+        </nav>
+    </header>
+
+    {% block content %}
+    <!--home section starts-->
+
+    <section class="home">
+        <div class="content">
+            <h3>Organic & Healthy Foods</h3>
+            <p>Get to enjoy the amazing delicacies with affordable prices from our Restaurant.</p>
+            <a href="{% url 'order' %}" class="btn">order now</a>
+        </div>
+
+        <div class="image">
+            <img src="{% static 'images/home-img.png' %}" alt="">
+        </div>
+    </section>
+
+    <!--home section ends-->
+
+    {% endblock content %}
+
+    <!--footer section-->
+    <section class="footer">
+
+        <div class="share">
+            <a href="#" class="btn">facebook</a>
+            <a href="#" class="btn">instagram</a>
+            <a href="#" class="btn">whatsapp</a>
+        </div>
+
+        <h1 class="credit"> developed by <span> smart developer </span> &copy; 2022 </h1>
+
+    </section>
+
+    <!--scroll top button-->
+    <a href="#" class="fas fa-angle-up" id="scroll-top"></a>
+
+
+    <!--loader-->
+    <div class="loader-container">
+        <img src="{% static 'images/loader.gif' %}" alt="">
+    </div>
+
+    <!--custom js file link-->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

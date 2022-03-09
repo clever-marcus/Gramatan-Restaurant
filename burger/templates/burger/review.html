@@ -1,0 +1,54 @@
+{% extends 'burger/index.html' %}
+{% load static %}
+
+{% block content %}
+<!--review section starts-->
+<section class="review">
+    <h1 class="heading"> our customers <span>reviews</span> </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="{% static 'images/pic1.png' %}" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis incidunt asperiores eligendi esse
+                eaque veniam aspernatur quia recusandae quasi nulla.</p>
+        </div>
+
+        <div class="box">
+            <img src="{% static 'images/pic2.png' %}" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis incidunt asperiores eligendi esse
+                eaque veniam aspernatur quia recusandae quasi nulla.</p>
+        </div>
+
+        <div class="box">
+            <img src="{% static 'images/pic3.png' %}" alt="">
+            <h3>john deo</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis incidunt asperiores eligendi esse
+                eaque veniam aspernatur quia recusandae quasi nulla.</p>
+        </div>
+    </div>
+</section>
+<!--review section ends-->
+{% endblock content %}
